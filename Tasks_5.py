@@ -4,13 +4,31 @@
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8 
 
-a = int(input("Введите число: "))
-b = int(input("В какую степень возвести число: "))
+# a = int(input("Введите число: "))
+# b = int(input("В какую степень возвести число: "))
 
-def raise_degree(a, b):
-    if b == 1:
-        return a
-    if b != 1:
-        return a * raise_degree(a, b - 1)
+# def raise_degree(a, b):
+#     if b == 1:
+#         return a
+#     if b != 1:
+#         return a * raise_degree(a, b - 1)
 
-print(raise_degree(a, b))
+# print(raise_degree(a, b))
+
+
+# Задача 28: Напишите рекурсивную функцию sum(a, b), возвращающую сумму двух целых неотрицательных чисел. Из всех арифметических 
+# операций допускаются только +1 и -1. 
+# Также нельзя использовать циклы.
+
+# *Пример:*
+
+# 2 2
+#     4
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+def sum(a, b):
+    if a == 0:
+        return b
+    return sum(a-1, b+1)
+print(sum(a,b))
